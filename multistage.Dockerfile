@@ -20,6 +20,6 @@ FROM openjdk:21-jdk
 
 WORKDIR /ClinicApp
 
-COPY --from=build /ClinicApp/build/libs/petClinicBackend-0.0.1-SNAPSHOT.jar /ClinicApp
+COPY --from=build /ClinicApp/build/libs/petClinicBackend-1.1.0-SNAPSHOT.jar /ClinicApp
 
-CMD ["java", "-jar", "/ClinicApp/petClinicBackend-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "/ClinicApp/petClinicBackend-1.1.0-SNAPSHOT.jar"]
