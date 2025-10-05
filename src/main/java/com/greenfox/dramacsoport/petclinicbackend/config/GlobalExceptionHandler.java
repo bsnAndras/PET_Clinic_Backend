@@ -10,6 +10,7 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import javax.naming.NameAlreadyBoundException;
 import java.util.HashMap;
@@ -80,6 +81,13 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleDeletionError(DeletionException ex) {
         ErrorResponse errorResponse = new ErrorResponse("Deletion Error", ex.getMessage());
         return new ResponseEntity<>(errorResponse, HttpStatus.CONFLICT);
+    }
+
+    //Invalid endpoint path exception
+    @ExceptionHandler(NoResourceFoundException.class)
+    public ResponseEntity<ErrorResponse> handleNoResourceFoundException(NoResourceFoundException ex) {
+        ErrorResponse errorResponse = new ErrorResponse("Resource Not Found", "The requested resource was not found");
+        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
 
      // Default exception handler
