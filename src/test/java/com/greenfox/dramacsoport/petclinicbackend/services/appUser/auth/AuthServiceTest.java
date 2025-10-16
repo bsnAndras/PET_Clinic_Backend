@@ -5,7 +5,7 @@ import com.greenfox.dramacsoport.petclinicbackend.dtos.user.login.LoginResponseD
 import com.greenfox.dramacsoport.petclinicbackend.dtos.user.register.RegisterRequestDTO;
 import com.greenfox.dramacsoport.petclinicbackend.models.AppUser;
 import com.greenfox.dramacsoport.petclinicbackend.repositories.AppUserRepository;
-import com.greenfox.dramacsoport.petclinicbackend.services.JwtService;
+import com.greenfox.dramacsoport.petclinicbackend.services.applicationServices.JwtService;
 import com.greenfox.dramacsoport.petclinicbackend.services.appUser.AppUserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

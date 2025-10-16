@@ -9,7 +9,7 @@ import com.greenfox.dramacsoport.petclinicbackend.exceptions.IncorrectPasswordEx
 import com.greenfox.dramacsoport.petclinicbackend.exceptions.InvalidPasswordException;
 import com.greenfox.dramacsoport.petclinicbackend.models.AppUser;
 import com.greenfox.dramacsoport.petclinicbackend.repositories.AppUserRepository;
-import com.greenfox.dramacsoport.petclinicbackend.services.JwtService;
+import com.greenfox.dramacsoport.petclinicbackend.services.applicationServices.JwtService;
 import com.greenfox.dramacsoport.petclinicbackend.services.appUser.AppUserService;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

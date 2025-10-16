@@ -1,6 +1,6 @@
 package com.greenfox.dramacsoport.petclinicbackend.config;
 
-import com.greenfox.dramacsoport.petclinicbackend.dtos.ErrorResponse;
+import com.greenfox.dramacsoport.petclinicbackend.dtos.api.ErrorResponse;
 import com.greenfox.dramacsoport.petclinicbackend.exceptions.*;
 import jakarta.validation.ValidationException;
 import org.springframework.http.HttpStatus;
