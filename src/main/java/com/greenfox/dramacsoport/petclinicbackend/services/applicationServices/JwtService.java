@@ -89,7 +89,6 @@ public class JwtService {
     }
 
     public boolean logoutUser() {
-        //TODO: write unit test for this method
         SecurityContextHolder.getContext().setAuthentication(null);
         return true;
     }

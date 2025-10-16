@@ -92,14 +92,6 @@ public class JwtServiceTest {
     @Test
     @WithMockUser(username = "test@user.com")
     public void shouldClearSecurityContextWhenLoggingOut() {
-
-        //Set up the security context
-        AppUser testUser = AppUser.builder()
-                .displayName("testUser")
-                .password("password")
-                .role(Role.USER)
-                .build();
-
         assertNotNull(SecurityContextHolder.getContext().getAuthentication());
         assertTrue(SecurityContextHolder.getContext().getAuthentication().isAuthenticated());
 
